@@ -1,164 +1,91 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "University API",
-    "description": "An API for University API",
+    "title": "Univeristy API",
+    "description": "An API for Univerity API",
     "version": "1.0.0"
   },
-  "host": "project2-n7h7.onrender.com",
+  "host": "localhost:3001",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
+    "/login": {
+      "get": {
+        "description": "",
+        "responses": {
+          "503": {
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/students/": {
       "get": {
-        "tags": [
-          "Students"
-        ],
-        "description": "All about students.",
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       },
       "post": {
-        "tags": [
-          "Students"
-        ],
-        "description": "Add a students to the database, -WARNING- This can only be done by the logged in user.",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "fname": {
-                  "example": "any"
-                },
-                "lname": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "major": {
-                  "example": "any"
-                },
-                "gender": {
-                  "example": "any"
-                },
-                "city": {
-                  "example": "any"
-                },
-                "state": {
-                  "example": "any"
-                },
-                "birthdate": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
+        "description": "",
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
     },
     "/students/{id}": {
       "get": {
-        "tags": [
-          "Students"
-        ],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       },
       "put": {
-        "tags": [
-          "Students"
-        ],
-        "description": "Update a students to the database, -WARNING- This can only be done by the logged in user.",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "fname": {
-                  "example": "any"
-                },
-                "lname": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "major": {
-                  "example": "any"
-                },
-                "gender": {
-                  "example": "any"
-                },
-                "city": {
-                  "example": "any"
-                },
-                "state": {
-                  "example": "any"
-                },
-                "birthdate": {
-                  "example": "any"
-                }
-              }
-            }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "401": {
+            "description": "Unauthorized"
           }
         }
       },
       "delete": {
-        "tags": [
-          "Students"
-        ],
-        "description": "Delete a students to the database, -WARNING- This can only be done by the logged in user.",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -168,127 +95,57 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
     },
     "/departments/": {
       "get": {
-        "tags": [
-          "Departments"
-        ],
-        "description": "All about departments.",
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       },
       "post": {
-        "tags": [
-          "Departments"
-        ],
-        "description": "Add a department to the database, -WARNING- This can only be done by the logged in user.",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "department": {
-                  "example": "any"
-                },
-                "deptCode": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
+        "description": "",
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
     },
     "/departments/{id}": {
       "get": {
-        "tags": [
-          "Departments"
-        ],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       },
       "put": {
-        "tags": [
-          "Departments"
-        ],
-        "description": "Update a department to the database, -WARNING- This can only be done by the logged in user.",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "department": {
-                  "example": "any"
-                },
-                "deptCode": {
-                  "example": "any"
-                }
-              }
-            }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "401": {
+            "description": "Unauthorized"
           }
         }
       },
       "delete": {
-        "tags": [
-          "Departments"
-        ],
-        "description": "Delete a department to the database, -WARNING- This can only be done by the logged in user.",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -298,133 +155,57 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
     },
     "/courses/": {
       "get": {
-        "tags": [
-          "Courses"
-        ],
-        "description": "All about courses.",
-        "produces": [
-          "application/json"
-        ],
+        "description": "",
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       },
       "post": {
-        "tags": [
-          "Courses"
-        ],
-        "description": "Add a course to the database, -WARNING- This can only be done by the logged in user.",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "deptCode": {
-                  "example": "any"
-                },
-                "courseNum": {
-                  "example": "any"
-                },
-                "courseName": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
+        "description": "",
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
     },
     "/courses/{id}": {
       "get": {
-        "tags": [
-          "Courses"
-        ],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       },
       "put": {
-        "tags": [
-          "Courses"
-        ],
-        "description": "Update a course to the database, -WARNING- This can only be done by the logged in user.",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "deptCode": {
-                  "example": "any"
-                },
-                "courseNum": {
-                  "example": "any"
-                },
-                "courseName": {
-                  "example": "any"
-                }
-              }
-            }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "401": {
+            "description": "Unauthorized"
           }
         }
       },
       "delete": {
-        "tags": [
-          "Courses"
-        ],
-        "description": "Delete a course to the database, -WARNING- This can only be done by the logged in user.",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -434,11 +215,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
